@@ -1,0 +1,19 @@
+{
+    "background": {
+       "scripts": [ "background.js" ]
+    },
+    "content_scripts": [ {
+       "all_frames": true,
+       "js": [ "content.js" ],
+       "matches": [ "http://*/*", "https://*/*" ],
+       "run_at": "document_end"
+    } ],
+    "options_page": "options.html",
+    "description": "Switches to smartphone's User-Agent if width is narrow",
+    "manifest_version": 2,
+    "minimum_chrome_version": "17.0",
+    "name": "Auto Change to Smartphone's UserAgent",
+    "permissions": [ "webRequest", "webRequestBlocking", "\u003Call_urls\u003E" ],
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1"
+}
