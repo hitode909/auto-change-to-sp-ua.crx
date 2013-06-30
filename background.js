@@ -13,7 +13,10 @@
         }
     });
 
-    var CurrentWidth = localStorage.width;
+    var CurrentWidth;
+    chrome.tabs.getSelected(function (tab) {
+        onFocusHandler(tab.id);
+    });
 
     var onMessageHandler = function (width) {
         if (! width) return;
